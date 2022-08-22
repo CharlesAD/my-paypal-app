@@ -29,6 +29,7 @@ function App() {
         </header>
       </div>
       <div>
+        <h2>Your balance is {balance} </h2>
         <label htmlFor="transfer">How much would you like to transfer?</label>
         <input
           type="number"
@@ -38,10 +39,21 @@ function App() {
           onChange={newValue}
         />
       </div>
-      <button type="submit" label="send" onClick={newBalance}>
+      <button
+        className="bg-green-600"
+        type="submit"
+        label="send"
+        id="send"
+        onClick={newBalance}
+      >
         Send
       </button>
-      <p>{message}</p>
+      <label htmlFor="feedback" hidden>
+        Feedback
+      </label>
+      <p id="feedback" name="feedback">
+        {message}
+      </p>
     </>
   );
 }

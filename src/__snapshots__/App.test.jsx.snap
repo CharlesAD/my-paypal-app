@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+Array [
+  <div
+    className="text-center"
+  >
+    <header
+      className=""
+    >
+      <h1>
+        Welcome to My Piggy Bank
+      </h1>
+    </header>
+  </div>,
+  <div>
+    <h2>
+      Your balance is 
+      100
+       
+    </h2>
+    <label
+      htmlFor="transfer"
+    >
+      How much would you like to transfer?
+    </label>
+    <input
+      id="transfer"
+      name="transfer"
+      onChange={[Function]}
+      placeholder="Enter your desired transfer balance"
+      type="number"
+    />
+  </div>,
+  <button
+    className="bg-green-600"
+    id="send"
+    label="send"
+    onClick={[Function]}
+    type="submit"
+  >
+    Send
+  </button>,
+  <label
+    hidden={true}
+    htmlFor="feedback"
+  >
+    Feedback
+  </label>,
+  <p
+    id="feedback"
+    name="feedback"
+  >
+    What would you like to send?
+  </p>,
+]
+`;
