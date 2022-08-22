@@ -3,17 +3,22 @@ import { useState } from "react";
 
 function App() {
   const [message, setMessage] = useState("What would you like to send?");
+  const [number, setNumber] = useState(0);
 
   const balance = 100;
 
-  const newBalance = (value) => {
-    if (value > balance) {
+  const newBalance = () => {
+    if (number > balance) {
       setMessage("You do not have enough funds");
       console.log("broke");
     } else {
       setMessage("Thank you for your transfer");
       console.log("success");
     }
+  };
+
+  const newValue = (event) => {
+    setNumber(event.target.valueAsNumber);
   };
 
   return (
@@ -30,6 +35,7 @@ function App() {
           placeholder="Enter your desired transfer balance"
           id="transfer"
           name="transfer"
+          onChange={newValue}
         />
       </div>
       <button type="submit" label="send" onClick={newBalance}>
